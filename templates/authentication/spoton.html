@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="style.css" />
+   <title>SPOTON PAGE</title>
+   <style>
+    /* UTILITIES */
+    * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+    }
+    body {
+     font-family: cursive;
+    }
+    a {
+     text-decoration: none;
+    }
+    li {
+     list-style: none;
+    }
+    
+    /* NAVBAR STYLING STARTS */
+    .navbar {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 20px;
+     background-color: #09569b;
+     color: #fff;
+    }
+    .nav-links a {
+     color: #fff;
+    }
+    /* LOGO */
+    .logo {
+     font-size:32px;
+    }
+    /* NAVBAR MENU */
+    .menu {
+     display: flex;
+     gap: 1em;
+     font-size: 18px;
+    }
+    .menu li:hover {
+     background-color: #7e82e9;
+     border-radius: 5px;
+     transition: 0.3s ease;
+    }
+    .menu li {
+     padding: 5px 14px;
+    }
+    /* DROPDOWN MENU */
+    .Treatments {
+     position: relative; 
+    }
+    .dropdown {
+     background-color: rgb(1, 139, 139);
+     padding: 1em 0;
+     position: absolute; /*WITH RESPECT TO PARENT*/
+     display: none;
+     border-radius: 8px;
+     top: 35px;
+    }
+    .dropdown li + li {
+     margin-top: 10px;
+    }
+    .dropdown li {
+     padding: 0.5em 1em;
+     width: 8em;
+     text-align: center;
+    }
+    .dropdown li:hover {
+     background-color: #4c9e9e;
+    }
+    .Treatments:hover .dropdown {
+     display: block;
+    }
+
+
+
+<!-- -->
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: -65px 0 30px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 20%;
+  border-radius: 40%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+ 
+</style>
+ </head>
+
+ <body>
+   <nav class="navbar">
+     <!-- LOGO -->
+     <div class="logo">My Spoton</div>
+     <!-- NAVIGATION MENU -->
+     <ul class="nav-links">
+    
+      
+       <!-- NAVIGATION MENUS -->
+       <div class="menu">
+         <li><a href="/">Home</a></li>
+         <li class="Treatments">
+           <a href="/">Treatments</a>
+           <!-- DROPDOWN MENU -->
+           <ul class="dropdown">
+             <li><a href="/vaccine">Vaccination schedule </a></li>
+             <li><a href="/deworming">Deworming schedule</a></li>
+             <li><a href="/spoton">Spot on</a></li>
+           </ul>
+         </li>
+        </div> 
+      </nav>    
+
+
+        <script language="javascript">
+          function insertData() {
+              var Spoton_name = document.getElementById("inputSpoton_Name").value;
+              var Given_date = document.getElementById("inputGiven_date").value;
+              var Due_date = document.getElementById("inputDue_date").value;
+              document.getElementById("insertionPoint").innerHTML += "<tr><td>" + Spoton_name + "</td><td>" + Given_date + "</td><td>" + Due_date + "</td></tr>";
+            
+              // The below part is to clear the values after the entry is added.
+              document.getElementById("inputSpotonName").value = "";
+              document.getElementById("inputGiven_date").value = "";
+              document.getElementById("inputDue_date").value = "";
+          }
+      </script>
+      <table id="t1">
+      
+          <colgroup>
+              <col span="2" class="c2">
+              <col>
+              <col class="c1">
+          </colgroup>
+          <thead>
+              <tr>
+                  <th>Spoton_Name</th>
+                  <th>Given_date</th>
+                  <th>Due_date</th>
+              </tr>
+              <tr>
+                <td>Revolution</td>
+                <td>26/05/21</td>
+                <td>26/08/21</td>
+              </tr>
+              <tr>
+                <td>Radicate</td>
+                <td>04/09/21</td>
+                <td>04/11/21</td>
+      
+              </tr>
+              <tr>
+                <td>QuickFip</td>
+                <td>13/01/22</td>
+                <td>13/04/22</td>
+      
+              </tr>
+          </thead>
+          <tbody id="insertionPoint">
+           
+            
+          </tbody>
+      </table>
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Add</button>
+      
+      <div id="id01" class="modal">
+        
+        <form  method="POST" class="modal-content animate" action="/">
+         {% csrf_token %}
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="static/paweazy.jpg" alt="Avatar" class="avatar">
+          </div>
+          <div class="banner-info" align="center">
+            <span><label>Spoton_Name </label></span>
+            <span><input id="inputSpoton_Name" type="text" class="text-center" required="" placeholder="Enter Spoton Name"></span><br>
+            <span><label>Given_date </label></span>
+            <span><input id="inputGiven_date" type="text" class="text-center" required=""></span><br>
+            <span><label>Due_date</label></span>
+            <span><input id="inputDue_date" type="text" class="text-center" required=""></span><br>
+        </div>
+      
+        <div class="logo">
+          <input type="button"  onClick="insertData()"  value="Add entry">
+        </div>
+        </form>
+      </div>
+
+
+  </body>

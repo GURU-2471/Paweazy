@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="style.css" />
+   <title>HOME PAGE</title>
+   <style>
+    /* UTILITIES */
+    * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+    }
+    body {
+     font-family: cursive;
+    }
+    a {
+     text-decoration: none;
+    }
+    li {
+     list-style: none;
+    }
+    
+    /* NAVBAR STYLING STARTS */
+    .navbar {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 20px;
+     background-color: #09569b;
+     color: #fff;
+    }
+    .nav-links a {
+     color: #fff;
+    }
+    /* LOGO */
+    .logo {
+     font-size:32px;
+    }
+    /* NAVBAR MENU */
+    .menu {
+     display: flex;
+     gap: 1em;
+     font-size: 18px;
+    }
+    .menu li:hover {
+     background-color: #7e82e9;
+     border-radius: 5px;
+     transition: 0.3s ease;
+    }
+    .menu li {
+     padding: 5px 14px;
+    }
+    /* DROPDOWN MENU */
+    .Treatments {
+     position: relative; 
+    }
+    .dropdown {
+     background-color: rgb(1, 139, 139);
+     padding: 1em 0;
+     position: absolute; /*WITH RESPECT TO PARENT*/
+     display: none;
+     border-radius: 8px;
+     top: 35px;
+     z-index:1;
+    }
+    .dropdown li + li {
+     margin-top: 10px;
+    }
+    .dropdown li {
+     padding: 0.5em 1em;
+     width: 8em;
+     text-align: center;
+    }
+    .dropdown li:hover {
+     background-color: #4c9e9e;
+    }
+    .Treatments:hover .dropdown {
+     display: block;
+    }
+
+    /*---------------------------------------*/
+    /* backgrnd img */
+    /*---------------------------------------*/
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .hero-image {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("static/dashboardimg.jpg");
+      height: 90%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+    
+    .hero-text {
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      bottom : 10%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+    }
+    
+    .hero-text button {
+      border: none;
+      border-radius: 5px;
+      outline: 10;
+      display: inline-block;
+      padding: 10px 25px;
+      color: black;
+      background-color: #ddd;
+      text-align: center;
+      cursor: pointer;
+    }
+    
+    .hero-text button:hover {
+      background-color: #555;
+      color: white;
+    }
+
+
+ 
+</style>
+ </head>
+
+ <body>
+   <nav class="navbar">
+     <!-- LOGO -->
+     <div class="logo">My Dashboard</div>
+     <!-- NAVIGATION MENU -->
+     <ul class="nav-links">
+    
+      
+       <!-- NAVIGATION MENUS -->
+       <div class="menu">
+         <li><a href="/">Home</a></li>
+         <li class="Treatments">
+          <lable href="/">Treatments</lable>
+           <!-- DROPDOWN MENU -->
+           <ul class="dropdown">
+             <li><a href="/vaccine">Vaccination schedule </a></li>
+             <li><a href="/deworming">Deworming schedule</a></li>
+             <li><a href="/spoton">Spot on</a></li>
+           </ul>
+         </li>
+         <li><a href="/signout">Signout</a></li>
+       </div>
+     </ul>
+   </nav>
+
+    <!--backgrnd img & login /button -->
+    
+<div class="hero-image">
+  <div class="hero-text">
+    <h1 style="font-size:50px">PAWEAZY</h1>
+    <p>Makes pets record easy</p>
+    <button> <a href="/login"> LOGIN </a></button>
+  </div>
+</div>
+
+ </body>
+</html>
